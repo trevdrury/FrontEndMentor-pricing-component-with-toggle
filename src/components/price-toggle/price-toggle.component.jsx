@@ -1,15 +1,21 @@
-import React from 'react'
-import { ToggleContainer, Annually, Monthly, CheckBoxWrapper, CheckBox, CheckBoxLabel } from './price-toggle.styles'
+import React from "react";
+import {
+  ToggleContainer,
+  ToggleOption,
+  ToggleBack,
+  ToggleFront,
+} from "./price-toggle.styles";
 
-const PriceToggle = () => (
-  <ToggleContainer>
-    <Annually>Annually</Annually>
-    <CheckBoxWrapper>
-      <CheckBox id='checkbox' type='checkbox'/>
-      <CheckBoxLabel htmlFor='checkbox'/>
-    </CheckBoxWrapper>
-    <Monthly>Monthly</Monthly>
-  </ToggleContainer>
-)
+const PriceToggle = ({ option, handleToggle }) => {
+  return (
+    <ToggleContainer onClick={handleToggle}>
+      <ToggleOption>Annually</ToggleOption>
+      <ToggleBack>
+        <ToggleFront option={option} />
+      </ToggleBack>
+      <ToggleOption>Monthly</ToggleOption>
+    </ToggleContainer>
+  );
+};
 
-export default PriceToggle
+export default PriceToggle;

@@ -1,27 +1,42 @@
-import React from 'react'
+import React from "react";
 
-import { PriceCardContainer, PlanType, Price, Currency, Divider, SellingPoint, LearnMoreButton } from './price-card.styles.jsx'
+import {
+  PriceCardContainer,
+  PlanType,
+  Price,
+  Divider,
+  Currency,
+  SellingPoint,
+  LearnMoreButton,
+} from "./price-card.styles.jsx";
 
-const PriceCard = ({ productDetails }) => {
-  const { planType, price, maxStorage, maxUsers, maxSend } = productDetails
+const PriceCard = ({ option, productDetails }) => {
+  const {
+    planType,
+    monthlyPrice,
+    annualPrice,
+    maxStorage,
+    maxUsers,
+    maxSend,
+  } = productDetails;
 
   return (
     <PriceCardContainer planType={planType}>
       <PlanType>{planType}</PlanType>
-      <Price>
-        <Currency>$</Currency>{price}
+      <Price plan={planType}>
+        <Currency>$</Currency>
+        {option === "monthly" ? monthlyPrice : annualPrice}
       </Price>
-      <Divider />
+      <Divider plan={planType} />
       <SellingPoint>{maxStorage} GB Storage</SellingPoint>
-      <Divider />
+      <Divider plan={planType} />
       <SellingPoint>{maxUsers} Users Allowed</SellingPoint>
-      <Divider />
+      <Divider plan={planType} />
       <SellingPoint>Send up to {maxSend} GB</SellingPoint>
-      <Divider />
+      <Divider plan={planType} />
       <LearnMoreButton plan={planType}>LEARN MORE</LearnMoreButton>
     </PriceCardContainer>
-  )
-}
+  );
+};
 
-export default PriceCard
-
+export default PriceCard;

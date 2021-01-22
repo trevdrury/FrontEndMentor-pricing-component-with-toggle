@@ -1,17 +1,27 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const PriceFeatureContainer = styled.div`
   max-width: 1440px;
   display: flex;
   flex-direction: column;
-  margin: 5.0rem 2.4rem;
+  margin: 5rem 2.4rem;
   align-items: center;
-`
 
-export const Headline = styled.h1`
-  font-size: 3.2rem;
-  line-height: 3.9rem;
-  text-align: center;
-  color: #6e728e;
-  padding: 2.0rem;
-`
+  h1 {
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    text-align: center;
+    color: #6e728e;
+    padding: 2rem;
+  }
+`;
+
+export const PriceCardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1060px) {
+    flex-direction: row;
+    align-items: center;
+  }
+`;
