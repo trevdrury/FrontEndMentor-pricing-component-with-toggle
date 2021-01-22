@@ -36,7 +36,7 @@ body {
   background-color: #f2f2f2;
   background-image: url("./assets/bg-top.svg");
   background-position: 156px -46px;
-  background-size: cover;
+
   background-repeat: no-repeat;
   font-family: "Montserrat", sans-serif;
 }
@@ -45,6 +45,5 @@ body {
   body {
     background-image: url("./assets/bg-top.svg"), url("./assets/bg-bottom.svg");
     background-position: top right, bottom left;
-    background-size: fit;
   }
 }
