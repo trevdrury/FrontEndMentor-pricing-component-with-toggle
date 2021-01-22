@@ -45,5 +45,6 @@ body {
   body {
     background-image: url("./assets/bg-top.svg"), url("./assets/bg-bottom.svg");
     background-position: top right, bottom left;
+    background-size: fit;
   }
 }
