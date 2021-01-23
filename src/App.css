@@ -33,10 +33,9 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-size: 1.5rem;
-  background-color: #f2f2f2;
+  background-color: #f7f7fe;
   background-image: url("./assets/bg-top.svg");
   background-position: 156px -46px;
-
   background-repeat: no-repeat;
   font-family: "Montserrat", sans-serif;
 }

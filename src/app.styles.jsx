@@ -19,6 +19,7 @@ export const PriceFeatureContainer = styled.div`
 export const PriceCardContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 2.8rem;
 
   @media (min-width: 1060px) {
     flex-direction: row;
